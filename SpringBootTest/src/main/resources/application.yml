@@ -1,0 +1,9 @@
+oyd:
+  myname: resource:application.yml
+  myphone: 13
+
+spring:
+  profiles:
+    active: dev
+profiles
+
