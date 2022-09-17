@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>SprongBootJdbc</artifactId>
+    <artifactId>SpringBootDruid</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SprongBootJdbc</name>
-    <description>SprongBootJdbc</description>
+    <name>SpringBootDruid</name>
+    <description>SpringBootDruid</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -18,15 +18,28 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-
+        <!-- SpringBoot整合Druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.9</version>
+        </dependency>
+        <!--        为访问druid监控页面 加入web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -69,7 +82,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.example.sprongbootjdbc.SprongBootJdbcApplication</mainClass>
+                    <mainClass>com.example.springbootdruid.SpringBootDruidApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

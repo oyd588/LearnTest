@@ -1,0 +1,17 @@
+
+spring:
+  application:
+    # \u5E94\u7528\u540D\u79F0
+    name: SprongBootJdbc
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+    url: jdbc:mysql://localhost:3306/mall?serverTimezone=UTC
+    username: root
+    password: root
+
+logging:
+  level:
+    # \u63A7\u5236\u6253\u5370Sql\u8BED\u53E5
+    org.springframework.jdbc.core.JdbcTemplate: debug
+
